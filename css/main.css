@@ -59,7 +59,7 @@ p {
 
 .top_section {
     text-align: center;
-    margin-bottom: 100px;
+    margin-bottom: 80px;
 }
 
 .top_section h2 {
@@ -74,7 +74,7 @@ p {
 
 .btn {
     background-color: var(--main_color);
-    padding: 14px 30px;
+    padding: 8px 14px;
     border-radius: 10px;
     text-transform: capitalize;
     color: var(--white_color);
@@ -203,7 +203,7 @@ header nav {
 
 header nav .logo {
     font-size: 25px;
-    width: 200px;
+    width: 5%;
     color: var(--main_color);
     transition: 0.3s;
     -webkit-transition: 0.3s;
@@ -272,6 +272,12 @@ header nav .links {
     }
 }
 
+@media(max-width:500px) {
+        .icon_menu {
+        margin-left: 15px;
+    }
+}
+
 header nav .links a {
     color: var(--white_color);
     text-transform: capitalize;
@@ -282,6 +288,7 @@ header nav .links a {
     -ms-transition: 0.3s;
     -o-transition: 0.3s;
 }
+
 
 header nav .links a.active,
 header nav .links a:hover {
@@ -300,9 +307,10 @@ header nav .icons {
     }
 
     header nav .icons {
-        gap: 15px;
+        gap: 10px;
         align-items: center;
     }
+
 
     header nav .logo a {
         font-size: 18px;
@@ -323,6 +331,12 @@ header nav .icons a {
 header nav .icons a:hover {
     scale: 1.4;
 }
+
+/* @media(max-width:550px){
+            header nav .icons a {
+            font-size: 30px;
+        }
+    } */
 
 /* landing */
 
@@ -423,7 +437,7 @@ header nav .icons a:hover {
 
 .landing .btn {
     font-size: 20px;
-    padding: 18px 40px;
+    padding: 14px 28px;
     color: var(--black_color);
 }
 
@@ -456,10 +470,11 @@ header nav .icons a:hover {
     align-items: center;
     border: 5px;
     padding: 50px;
+    gap: 30px;
 }
 
 .about .text {
-    width: 60%;
+    width: 58%;
 }
 
 .about .text h5 {
@@ -493,22 +508,94 @@ header nav .icons a:hover {
     margin-right: 10px
 }
 
-.about .skills {
+
+
+.about .boxs{
+    margin-top: 30px;
     display: flex;
     gap: 30px;
 }
+.about .boxs .box {
+    text-align: center;
+}
 
-.about .skills h2.f-skill,
-.about .skills h2.b-skill {
+.about .boxs .box h2{
+    padding-bottom: 20px;
+    font-size: 30px;
+    border-bottom: 1px solid var(--main_color);
+    color: var(--white_color);
+    margin-bottom: 40px;
+    
+}
+
+.about .boxs .box h2 span{
+    color: var(--white_color);
+    font-size: 18px;
+}
+.about .boxs .box .prog-holder {
+    margin-bottom: 20px;
+}
+/* @media(max-width:999px){
+.about .boxs{
+flex-wrap: wrap;
+}
+} */
+
+.about .boxs .box .prog-holder h4{
+    padding-bottom: 7px;
+    color: var(--white_color);
+    font-size: 20px;
+
+}
+.about .boxs .box .prog-holder .prog{
+    width: 100%;
+    position: relative;
+    height: 6px;
+    background-color: var(--white_color);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+/* @media(max-width:767px){
+    .about .boxs .box .prog-holder .prog{
+        width: 300px
+    }
+} */
+.boxs .box .prog-holder .prog h5{
+    font-size: 18px;
+    position: absolute;
+    right: -15px;
+    top: -35px;
     color: var(--main_color);
-    font-size: 28px;
-    text-transform: capitalize;
+}
+.boxs .box .prog-holder .prog span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    display: block;
+    background-color: var(--main_color);
+    border-radius: 10px;
+
 }
 
-.about .skills h2 {
-    margin-bottom: 10px;
-    color: var(--p_color);
+.about span.link  {
+margin-left: 40px;
+color : var(--white_color)
 }
+
+
+
+
+
+
+
+
+
+
 
 /* services */
 
@@ -734,22 +821,12 @@ header nav .icons a:hover {
     }
 
     .about .text {
-        width: 100%;
+        width: 90%;
         margin-bottom: 50px;
     }
 
-    .about .skills {
-        width: 100%;
-    }
 
-    .about .skills h2.f-skill,
-    .about .skills h2.b-skill {
-        font-size: 15px;
-    }
 
-    .about .skills h2 {
-        font-size: 13px;
-    }
 
     .projects .box {
         flex-direction: column;
@@ -810,6 +887,31 @@ header nav .icons a:hover {
 @media(max-width:550px) {
     .services .boxs .box {
         width: 100%;
+    }
+    .about .text{
+        width: 100%;
+    }
+    .about span {
+        font-size: 30px;
+    }
+        .about .boxs {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .about .boxs .box {
+        width: 100%;
+    }
+
+    .boxs .box .prog-holder .prog h5 {
+        right: -35px;
+        top: -35px;
+    }
+    .about .boxs .box h2{
+        font-size: 20px;
+    }
+    .about .boxs .box .prog-holder h4{
+        font-size: 15px;
     }
 
 }
